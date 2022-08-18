@@ -42,8 +42,7 @@ def main():
     start, end = 1993, 2021
     years = np.arange(start, end+1)
     mnths = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
-    # mss = read_surface('C:/Users/oa18724/Documents/Master_PhD_folder/a_mdt_data/computations/mss/dtu18_do0330_rr0004.dat')
-    with writer.saving(fig, f"sla_{start}_{end}.mp4", 100):
+    with writer.saving(fig, f"test_sla_{start}_{end}.mp4", 100):
         for year in years:
             for mnth in mnths:
                 print(f'year:{year}, month:{mnth}')
