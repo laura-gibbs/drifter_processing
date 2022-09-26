@@ -251,7 +251,7 @@ def main():
     mean_vn, mean_ve = compute_mean_vel(df_filt)
     print('*', np.shape(mean_vn), np.shape(mean_ve), mean_vn, mean_ve)
 
-    # print(df_filt)
+
     exit()
     plot_drifter_trajectories(df_filt, 'corr_v', global_extent=True)
 
@@ -262,16 +262,12 @@ def main():
     # df_d_corr = read_drifters_to_df('corr_drifters', 'test.dat', hdrs2)
     # df_d_corr.drop(['index'])
 
-
     # df_d_1990 = df_d[df_d.yy == 1990]
     # print(df_d_1990.head(200))
 
     # v_drifters = get_drifter_vel(df_d, 'v')
     # u_drifters = get_drifter_vel(df_d, 'u')
 
-    years = [1990, 1992]
-    months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    days = np.arange(4, 5, 0.25)
     
     df_month_list = get_time_step_over_month(df_d, years, months)
     df_time_step = get_time_step(df_d, years, months, days)
