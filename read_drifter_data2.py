@@ -65,7 +65,7 @@ def plot_time_step(time_step_list, direction=None):
     else:
         plt.scatter(x=time_step_list.lon, y=time_step_list.lat, s=5, c=time_step_list.spd, transform=crs, cmap='jet')
         print('Displayed speed: input v for northward velocity or u for eastward')
-    plt.show()    
+    plt.show()
 
 
 def get_time_step(df, years, months, days):
